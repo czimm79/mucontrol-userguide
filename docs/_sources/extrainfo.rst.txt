@@ -1,0 +1,25 @@
+*****************
+Extra Information
+*****************
+
+.. _pyqtgraph: http://www.pyqtgraph.org/
+.. _PyQt5: https://pypi.org/project/PyQt5/
+.. _PyInstaller: https://www.pyinstaller.org/
+.. _fbs: https://build-system.fman.io/
+.. _numpy: https://www.numpy.org/
+.. _nidaqmx: https://github.com/ni/nidaqmx-python/
+
+This application was written in Python 3.7 primarily using open source libraries pyqtgraph_ (for efficient live 2D and 3D
+plots), numpy_ (for the mathematical heavy lifting), and nidaqmx_ (for the API to talk to the physical cards). For Qt
+bindings for the GUI, PyQt5_ was used. The installer and application packaging was performed with help from PyInstaller_
+and fbs_.
+
+For further technical information on how the application works, please contact me at czimmermann@mines.edu and I can
+add you to the private GitHub code repository for MuControl, where you can see all the code and detailed documentation.
+If anyone is so inclined and interested in Python, I would also welcome collaboration for any new features or any bugs
+that may appear!
+
+Lastly, I welcome any input on how I could make this application better or easier to use.
+
+Written by Coy Zimmermann in 2019 as part of my PhD thesis work on magnetically propelled microwheels in Dr. David W.M.
+Marr's group at the Colorado School of Mines.

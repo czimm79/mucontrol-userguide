@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User Interface &mdash; MuControl User Guide 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Signal Parameters" href="signalparameters.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MuControl User Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#live-signal-plot">Live Signal Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parametrized-output-visualization">Parametrized Output Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-tree">Parameter Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#read-parameters">Read Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-parameters">Write Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#default-signal-values">Default Signal Values</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="signalparameters.html">Signal Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlmethods.html">Control Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extrainfo.html">Extra Information</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MuControl User Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>User Interface</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/userinterface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-interface">
+<span id="id1"></span><h1>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/FullWindow.png" src="_images/FullWindow.png" />
+<p>In this chapter, the details of each element of the user interface are explained.</p>
+<div class="section" id="live-signal-plot">
+<span id="id2"></span><h2>Live Signal Plot<a class="headerlink" href="#live-signal-plot" title="Permalink to this headline">¶</a></h2>
+<p>The last 100 data points from the data aquisition card will appear here. Use this window to check the expected
+output of coils. The y-axis will adjust to account for increasing amplitude.  Also, in order to use the keyboard
+controls, this plot needs to be clicked at least once before pressing the keys.</p>
+</div>
+<div class="section" id="parametrized-output-visualization">
+<h2>Parametrized Output Visualization<a class="headerlink" href="#parametrized-output-visualization" title="Permalink to this headline">¶</a></h2>
+<p>This contains a full three-dimensional representation of the output signal. The plot is interactive and the view can
+be changed by clicking, dragging, and scrolling out.</p>
+<p>The three signals output to the coils form this representation of the magnetic field in 3D space. This should always
+show a perfect circle. The microwheel structure follows this path, and thus this circle can be imagined to be like
+the wheel. The circle is split up into three segments for easier visualization of direction and tilt.</p>
+<img alt="_images/ThreeDPlot.png" class="align-center" src="_images/ThreeDPlot.png" />
+<p>The colors represent the direction of the rotation. The wheel will always start on green (green means go), then go to
+red, leaving the bottom half of the wheel blue. Using this key, we can conclude that the wheel in the image above is
+rotating clockwise and to the right and we should expect to see the same under the microscope if the coils are hooked
+up correctly.
+See <a class="reference internal" href="signalparameters.html#calibration"><span class="std std-ref">the calibration section</span></a> to ensure that the actual magnetic field looks like the
+visualization.</p>
+</div>
+<div class="section" id="parameter-tree">
+<span id="param-tree"></span><h2>Parameter Tree<a class="headerlink" href="#parameter-tree" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/ParamTree.png" class="align-center" src="_images/ParamTree.png" />
+<p>This section of the interface allows for direct interaction of the signal parameters and a calibration mode. Each
+parameter can be:</p>
+<ol class="arabic simple">
+<li><p>Clicked on to manually type in a value</p></li>
+<li><p>Adjusted using the up and down arrows on the right side</p></li>
+<li><p>Reverted to the default value of that session using the orange arrow button on the far right side</p></li>
+</ol>
+<p>In the calibration section, the output mode can be toggled between “Normal” and “Calibration”. See the
+<a class="reference internal" href="signalparameters.html#calibration"><span class="std std-ref">Calibration</span></a> section for more detail on this functionality.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The values in this section are temporary - they will reset to their defaults after MuControl is restarted.
+To change the default values, use the settings window.</p>
+</div>
+</div>
+<div class="section" id="settings">
+<span id="id3"></span><h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/SettingsWindow.png" src="_images/SettingsWindow.png" />
+<p>This window allows the user to change important settings for the <em>National Instruments (NI)</em> input and output cards. It
+can be accessed in File -&gt; Settings. The <strong>Default Signal Values</strong> section also allows for default value changes between
+restarts in the <a class="reference internal" href="#param-tree"><span class="std std-ref">Parameter Tree</span></a>. After calibration, the Z-Coefficient should be set here. These
+values will only be used <strong>after the next restart of the application</strong>. Below is a description of each setting and what it does.</p>
+<div class="section" id="read-parameters">
+<h3>Read Parameters<a class="headerlink" href="#read-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>DAQ Name</dt><dd><p>The name of the data aquisition card, assigned by the <strong>NI-DAQmx</strong> drivers. By default the device name is <code class="code docutils literal notranslate"><span class="pre">Dev1</span></code>.
+This name can be found by opening up the <strong>NI-MAX</strong> software that was installed with the drivers, clicking on devices
+on the left, and viewing the connected devices. This will be the same as the name used in the previous MATLAB control
+code.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If this name is not correct, MuControl cannot “see” the card!</p>
+</div>
+<dl class="simple" id="read-channel-list">
+<dt>Read Channel List</dt><dd><p>A list of the input channels being used on the physical card. To find out what channels your wires are plugged into,
+google the model name of the card that you have and match the wires to their channel name. By default, this list is
+configured to read from six channels (for six coils). If your setup only has 5, simply delete the one that is not being
+used. These channels will be the same that were in the previous MATLAB control code.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to keep the formatting, with square brackets around the list and small quotes around each channel:
+<code class="code docutils literal notranslate"><span class="pre">['ai0','ai1','ai2','ai3','ai4']</span></code></p>
+</div>
+<dl class="simple">
+<dt>DAQ Read Rate</dt><dd><p>The rate at which the data aquisition card collects samples in Hz (or samples per second). This value should be okay
+at its default, as it provides a good balance between application performance and signal resolution.</p>
+</dd>
+<dt>Read Chunk Size</dt><dd><p>The number of points that are retrieved from the data buffer and plotted. This value should also be okay at its default.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="write-parameters">
+<h3>Write Parameters<a class="headerlink" href="#write-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Function Gen. Name</dt><dd><p>The name of the function generator name, assigned by the <strong>NI-DAQmx</strong> drivers. By default the device name is
+<code class="code docutils literal notranslate"><span class="pre">cDAQ1Mod1</span></code>. The first part of the name “cDAQ1” refers to the chassis, while the “Mod1” refers to the module
+housed within. This name can be found in the same manner as the <strong>DAQ Name</strong>.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If this name is not correct, MuControl cannot “see” the card!</p>
+</div>
+<dl class="simple">
+<dt>Write Channel List</dt><dd><p>A list of the output channels being used. The numbers of the channels are printed on the physical device where the
+wires are inserted. By default: <code class="code docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2]</span></code> correspond to coils [x, y, z]. Be sure to keep the same
+formatting if any numbers are changed!</p>
+</dd>
+<dt>Generation Rate</dt><dd><p>The rate at which the function generator generates voltage values in Hz (or samples per second). The default, 8000, is
+very likely sufficient for signal frequencies 10-150 Hz from my experiments using an oscilloscope to check the quality
+of the waveforms. If this value is changed, I recommend changing it by increments of 1000. It is also required that the
+number is divisible by 10.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="default-signal-values">
+<h3>Default Signal Values<a class="headerlink" href="#default-signal-values" title="Permalink to this headline">¶</a></h3>
+<p>To adjust the default signal parameters between application restarts, modify these values. For further explanation, see
+<a class="reference internal" href="signalparameters.html#params"><span class="std std-ref">parameters</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="signalparameters.html" class="btn btn-neutral float-right" title="Signal Parameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MarrLabCSM/Coy Zimmermann
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+.. _control-methods:
+
+***************
+Control Methods
+***************
+
+Apart from manually adjusting the :ref:`signal parameters <params>` in the :ref:`Parameter Tree <param-tree>`, they
+can also be adjusted using the keyboard or a gamepad (controller).
+
+.. warning:: The parameters are not range limited. Everyone's setup may require different voltage
+  multipliers. Take care that a large current is not supplied to your coil setup that may cause excessive heating
+  and/or damage! (The National Instruments cards, however, will automatically shut down if an unreasonable voltage is
+  requested)
+
+Keyboard
+########
+
+The controls for operating the :ref:`signal parameters <params>` using the keyboard are listed in the center of the
+application - with one caveat. In order to enable the keyboard presses, the :ref:`live signal plot<live-signal-plot>`
+must be single clicked at least once so it is the active portion of the application. This is implemented so other parts
+of the application may be manipulated using the keys.
+
+Gamepad (Controller)
+####################
+
+The controller support in MuControl is plug-and-play. If no controller is detected, everything behaves as normal.
+However, if a controller is connected before starting the application, it is active and its buttons can be used to
+modify the signal parameters. Most controllers should work as long as they wired and have an "Xbox" layout. The
+**Logitech Gamepad F310** is a cheap and pre-tested option that requires no setup besides plugging it in. It can be
+purchased from Amazon: https://www.amazon.com/Logitech-940-000110-Gamepad-F310/dp/B003VAHYQY/ref=sr_1_3?keywords=logitech+gamepad&qid=1566330291&s=gateway&sr=8-3

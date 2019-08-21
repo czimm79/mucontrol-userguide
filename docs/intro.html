@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; MuControl User Guide 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User Interface" href="userinterface.html" />
+    <link rel="prev" title="Welcome to the MuControl User Guide!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MuControl User Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start-guide">Quick Start Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="userinterface.html">User Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signalparameters.html">Signal Parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="controlmethods.html">Control Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extrainfo.html">Extra Information</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MuControl User Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>MuControl is a self-contained application intended for the manipulation and monitoring of electric signals for
+3D electromagnet systems. The goal of this app is to:</p>
+<ol class="arabic simple">
+<li><p>Output calculated signals to a <em>National Instruments (NI)</em> function generator to create a constant magnitude
+rotating 3-D magnetic field</p></li>
+<li><p>Monitor the signals using a data acquisition card (NI) and resistor array (physical setup not covered in this guide)
+by plotting the input live</p></li>
+<li><p>Allow for field parameters to be easily adjusted by using a graphical user interface, keyboard, or gamepad</p></li>
+<li><p>Eliminate the need for the user to have any coding knowledge</p></li>
+<li><p>Provide easy to understand visualizations</p></li>
+<li><p>Eliminate the performance issues and frequent crashes of MATLAB</p></li>
+<li><p>Provide a platform that can be extended with more features and advanced functionality (gradient tracking,
+computer vision, corkscrew modalities)</p></li>
+</ol>
+<p>This user guide seeks to provide a succinct overview of the application, how to operate it, and the necessary variables
+to know to control microwheels.</p>
+<div class="section" id="quick-start-guide">
+<h2>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Make sure the <strong>NI-DAQmx</strong> drivers from <em>National Instruments (NI)</em> are installed on the computer. If you have previously
+used this computer with the MATLAB control code, these should already be installed. If not, they can be found at
+<a class="reference external" href="https://www.ni.com/en-us/support/downloads/drivers/download.ni-daqmx.html#311818">https://www.ni.com/en-us/support/downloads/drivers/download.ni-daqmx.html#311818</a></p></li>
+<li><p>Install the application like any other by double clicking on the setup file and clicking through the installer.
+The program is now installed on the computer and can be launched like any other program. No other software is needed.</p></li>
+<li><p>Confirm the data acquisition card and function generator are connected and detected on the computer. Start the application.</p></li>
+<li><p>If the default names for the function generator or DAQ card are incorrect, suggestion boxes will pop up to notify the user.
+Modify these names in the settings window (located in File -&gt; Settings). For further information how to do this, see the
+section entitled <a class="reference internal" href="userinterface.html#settings"><span class="std std-ref">Settings</span></a>.</p></li>
+<li><p>Confirm the <a class="reference internal" href="userinterface.html#read-channel-list"><span class="std std-ref">read and write channel lists</span></a> are correct for your setup, see <a class="reference internal" href="userinterface.html#settings"><span class="std std-ref">Settings</span></a>.</p></li>
+<li><p>After restarting the application, see if lines are plotted on the <a class="reference internal" href="userinterface.html#live-signal-plot"><span class="std std-ref">Live Signal Plot</span></a>. Without an output,
+the lines should be close to zero, reading only environmental noise.</p></li>
+<li><p>To start outputting signals according to the set <a class="reference internal" href="signalparameters.html#params"><span class="std std-ref">signal parameters</span></a>, click the “Toggle Output”
+checkbox.</p></li>
+<li><p>For further information on the <a class="reference internal" href="signalparameters.html#params"><span class="std std-ref">signal parameters</span></a> or other aspects of the
+<a class="reference internal" href="userinterface.html#user-interface"><span class="std std-ref">UI</span></a>, see the corresponding sections.</p></li>
+<li><p>To view detail on how to control the signal parameters using the keyboard or a gamepad, see <a class="reference internal" href="controlmethods.html#control-methods"><span class="std std-ref">control methods</span></a>.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="userinterface.html" class="btn btn-neutral float-right" title="User Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the MuControl User Guide!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MarrLabCSM/Coy Zimmermann
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

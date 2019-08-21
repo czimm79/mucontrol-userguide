@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Signal Parameters &mdash; MuControl User Guide 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Control Methods" href="controlmethods.html" />
+    <link rel="prev" title="User Interface" href="userinterface.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MuControl User Guide
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userinterface.html">User Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Signal Parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#equations">Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibration">Calibration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#voltage-multiplier">Voltage Multiplier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#z-coefficient">Z- Coefficient</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controlmethods.html">Control Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extrainfo.html">Extra Information</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MuControl User Guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Signal Parameters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/signalparameters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="signal-parameters">
+<h1>Signal Parameters<a class="headerlink" href="#signal-parameters" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="parameters">
+<span id="params"></span><h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Voltage Multiplier<span class="classifier"><span class="math notranslate nohighlight">\(I_0\)</span></span></dt><dd><p>Constant that multiplies the voltage of all the signals, thereby changing the total magnitude of the field.
+Increases the radius of the 3-D field parametrized in time.</p>
+</dd>
+<dt>Frequency<span class="classifier"><span class="math notranslate nohighlight">\(f\)</span></span></dt><dd><p>How fast the field rotates, in rotations per second (Hz).</p>
+</dd>
+<dt>Z-Phase<span class="classifier"><span class="math notranslate nohighlight">\(\zeta\)</span></span></dt><dd><p>The degree (0-360) at which the z-component of the signal is the largest. Determines the direction of microwheel
+translation. e.g. at a Z-Phase of 0, the Z-Signal is in phase with the left (negative) X-coil. This results in
+the wheel rolling up (positive y direction).</p>
+</dd>
+<dt>Camber Angle<span class="classifier"><span class="math notranslate nohighlight">\(\theta\)</span></span></dt><dd><p>The angle measured between the positive z-axis and the rotating field. Determines the “tilt” of the wheel and field.</p>
+</dd>
+<dt>Z-Coefficient<span class="classifier"><span class="math notranslate nohighlight">\(C\)</span></span></dt><dd><p>A calculated coefficient which multiplies the z-coil signal in order to account for a possible difference in
+distance to the sample. To determine the z-coefficient for your setup, see <a class="reference internal" href="#calibration"><span class="std std-ref">calibration</span></a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="equations">
+<h2>Equations<a class="headerlink" href="#equations" title="Permalink to this headline">¶</a></h2>
+<p>For reference, these are the final forms of the equations used to generate three signals that always resolve to a
+perfect circle in parametrized space. If you’re curious about the derivation, please email me at <a class="reference external" href="mailto:czimmermann&#37;&#52;&#48;mines&#46;edu">czimmermann<span>&#64;</span>mines<span>&#46;</span>edu</a>!</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\omega = 2 \pi f\\I_x = I_0[ \sin(\zeta) \cos(\omega t) - \sin(\theta) \cos(\zeta) \sin(\omega t)]\\I_y = -I_0[ \cos(\zeta) \cos(\omega t) + \sin(\theta) \sin(\zeta) \sin(\omega t)]\\I_z = C * I_0 \cos(\theta)\sin(\omega t)\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="calibration">
+<span id="id1"></span><h2>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline">¶</a></h2>
+<p>For the signal parameters to work properly and make intuitive sense during control, calibration is necessary. Two simple
+calibrations are required for two parameters: Voltage Multiplier, to enable a 1 multiplier to equal 1 Amp output; and
+Z-Coefficient, to ensure that the magnetic field is of equal magnitude throughout its entire rotation (circular). If
+it is not necessary to have a completely accurate field, it is okay to leave this coefficient at 1. This will probably
+allow for slightly faster translation as the average field magnitude would be slightly higher, though the camber angle
+would be incorrect.</p>
+<div class="section" id="voltage-multiplier">
+<h3>Voltage Multiplier<a class="headerlink" href="#voltage-multiplier" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>In the calibration section, toggle the mode to “Calibration”. The app will now simply output three 20 Hz sin waves,
+each 90 degrees out of phase with the other.</p></li>
+<li><p>Adjust the physical dials on the amplifier channels so each wave has a peak amplitude matching the voltage value
+listed in “Calibration X-Voltage Ampl.”.</p></li>
+<li><p>Now when the app tells the coils to output an amplitude of 1.5 A, the coils will actually adjust to that value. You
+can confirm this in the <a class="reference internal" href="userinterface.html#live-signal-plot"><span class="std std-ref">Live Signal Plot</span></a>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calibration mode can also be used to determine which coils are hooked up to which amplifier, by setting one
+or more “Calibration Voltage Amplitudes” to zero.</p>
+</div>
+</div>
+<div class="section" id="z-coefficient">
+<h3>Z- Coefficient<a class="headerlink" href="#z-coefficient" title="Permalink to this headline">¶</a></h3>
+<p>This coefficient multiplies the Z-Coil signal to account for the difference in field caused by the z coil due to either:
+1) a shorter distance to the sample, and/or 2) using only 1 Z-Coil. This coefficient enables the actual magnetic field to
+be constant magnitude, or “circular”. Another way to think of this constant: “For every amp supplied to the xy coils,
+z-coefficient amps in the z coils creates the same magnetic field magnitude.”</p>
+<ol class="arabic simple">
+<li><p>In the calibration section, toggle the mode to “Calibration”. The app will now simply output three 20 Hz sin waves,
+each 90 degrees out of phase with the other.</p></li>
+<li><p>Change the “Calibration Z-Voltage Ampl.” to 0. Ensure that this corresponds to your z-coils and there is no current
+being supplied to them using a voltmeter. The x and y amplitudes should be 1.</p></li>
+<li><p>Use a Gauss meter to measure the peak magnetic field caused by the xy coils at the sample location. Take three measurements
+and average them.</p></li>
+<li><p>Do the same as step three, but with the z-coil amplitude being 1 and the xy amplitudes being 0. Take three measurements
+and average them.</p></li>
+<li><p>Use this equation to determine the z-coefficient. <span class="math notranslate nohighlight">\(C = \frac{xyfield}{zfield}\)</span></p></li>
+<li><p>Now that this coefficient has been calculated, enter it in the <a class="reference internal" href="userinterface.html#settings"><span class="std std-ref">settings</span></a> window to save it
+between application restarts.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="controlmethods.html" class="btn btn-neutral float-right" title="Control Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="userinterface.html" class="btn btn-neutral float-left" title="User Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MarrLabCSM/Coy Zimmermann
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

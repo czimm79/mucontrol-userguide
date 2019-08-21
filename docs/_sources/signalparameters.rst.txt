@@ -1,0 +1,87 @@
+*****************
+Signal Parameters
+*****************
+
+.. _params:
+
+Parameters
+##########
+
+Voltage Multiplier : :math:`I_0`
+    Constant that multiplies the voltage of all the signals, thereby changing the total magnitude of the field.
+    Increases the radius of the 3-D field parametrized in time.
+Frequency : :math:`f`
+    How fast the field rotates, in rotations per second (Hz).
+Z-Phase : :math:`\zeta`
+    The degree (0-360) at which the z-component of the signal is the largest. Determines the direction of microwheel
+    translation. e.g. at a Z-Phase of 0, the Z-Signal is in phase with the left (negative) X-coil. This results in
+    the wheel rolling up (positive y direction).
+Camber Angle : :math:`\theta`
+    The angle measured between the positive z-axis and the rotating field. Determines the "tilt" of the wheel and field.
+Z-Coefficient : :math:`C`
+    A calculated coefficient which multiplies the z-coil signal in order to account for a possible difference in
+    distance to the sample. To determine the z-coefficient for your setup, see :ref:`calibration <calibration>`.
+
+
+Equations
+#########
+
+For reference, these are the final forms of the equations used to generate three signals that always resolve to a
+perfect circle in parametrized space. If you're curious about the derivation, please email me at czimmermann@mines.edu!
+
+.. math::
+
+        \omega = 2 \pi f
+
+        I_x = I_0[ \sin(\zeta) \cos(\omega t) - \sin(\theta) \cos(\zeta) \sin(\omega t)]
+
+        I_y = -I_0[ \cos(\zeta) \cos(\omega t) + \sin(\theta) \sin(\zeta) \sin(\omega t)]
+
+        I_z = C * I_0 \cos(\theta)\sin(\omega t)
+
+
+
+.. _calibration:
+
+Calibration
+###########
+
+For the signal parameters to work properly and make intuitive sense during control, calibration is necessary. Two simple
+calibrations are required for two parameters: Voltage Multiplier, to enable a 1 multiplier to equal 1 Amp output; and
+Z-Coefficient, to ensure that the magnetic field is of equal magnitude throughout its entire rotation (circular). If
+it is not necessary to have a completely accurate field, it is okay to leave this coefficient at 1. This will probably
+allow for slightly faster translation as the average field magnitude would be slightly higher, though the camber angle
+would be incorrect.
+
+Voltage Multiplier
+------------------
+
+1. In the calibration section, toggle the mode to "Calibration". The app will now simply output three 20 Hz sin waves,
+   each 90 degrees out of phase with the other.
+2. Adjust the physical dials on the amplifier channels so each wave has a peak amplitude matching the voltage value
+   listed in "Calibration X-Voltage Ampl.".
+3. Now when the app tells the coils to output an amplitude of 1.5 A, the coils will actually adjust to that value. You
+   can confirm this in the :ref:`Live Signal Plot <live-signal-plot>`.
+
+.. note:: Calibration mode can also be used to determine which coils are hooked up to which amplifier, by setting one
+  or more "Calibration Voltage Amplitudes" to zero.
+
+Z- Coefficient
+--------------
+
+This coefficient multiplies the Z-Coil signal to account for the difference in field caused by the z coil due to either:
+1) a shorter distance to the sample, and/or 2) using only 1 Z-Coil. This coefficient enables the actual magnetic field to
+be constant magnitude, or "circular". Another way to think of this constant: "For every amp supplied to the xy coils,
+z-coefficient amps in the z coils creates the same magnetic field magnitude."
+
+1. In the calibration section, toggle the mode to "Calibration". The app will now simply output three 20 Hz sin waves,
+   each 90 degrees out of phase with the other.
+2. Change the "Calibration Z-Voltage Ampl." to 0. Ensure that this corresponds to your z-coils and there is no current
+   being supplied to them using a voltmeter. The x and y amplitudes should be 1.
+3. Use a Gauss meter to measure the peak magnetic field caused by the xy coils at the sample location. Take three measurements
+   and average them.
+4. Do the same as step three, but with the z-coil amplitude being 1 and the xy amplitudes being 0. Take three measurements
+   and average them.
+5. Use this equation to determine the z-coefficient. :math:`C = \frac{xyfield}{zfield}`
+6. Now that this coefficient has been calculated, enter it in the :ref:`settings <settings>` window to save it
+   between application restarts.
