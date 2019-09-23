@@ -15,5 +15,4 @@ Welcome to the MuControl User Guide!
    signalparameters
    controlmethods
    extrainfo
-   changelog
 
