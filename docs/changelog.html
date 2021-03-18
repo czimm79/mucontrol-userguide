@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; MuControl User Guide 1.1 documentation</title>
+  <title>Changelog &mdash; MuControl User Guide 1.1 documentation</title>
   
 
   
@@ -35,8 +34,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Extra Information" href="extrainfo.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,13 +81,20 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="userinterface.html">User Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signalparameters.html">Signal Parameters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="controlmethods.html">Control Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extrainfo.html">Extra Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-1-1">Version 1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-1-0-4">Version 1.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-1-0-3">Version 1.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-1-0-2">Version 1.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-1-0-0">Version 1.0.0</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -133,12 +140,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Index</li>
+      <li>Changelog</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -150,11 +159,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-1-1">
+<h2>Version 1.1<a class="headerlink" href="#version-1-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Added swarm modalities -&gt; Rolling, Corkscrew, Flipping, Switchback.</p></li>
+<li><p>Increased signal refresh rate to 40 1/s to allow for more complex swarm modalities.</p></li>
+<li><p>Switchback swarm can now be directed in any arbitrary direction during motion.</p></li>
+<li><p>Parameter Tree updated to allow for switching of swarm modalities, keybinds added and listed in UI.</p></li>
+<li><p>Code for swarm modalities renamed to ones that will be mentioned in my paper.</p></li>
+<li><p>Removed the setting for write signal generation rate, moving it to Python only modification.</p></li>
+<li><p>Moved the WaveGenerator class containing the field math to more appropriately named <cite>waves.py</cite></p></li>
+<li><p>Refactored Qt compatible sleeps into a clean function in <cite>misc_functions.py</cite></p></li>
+</ul>
+</div>
+<div class="section" id="version-1-0-4">
+<h2>Version 1.0.4<a class="headerlink" href="#version-1-0-4" title="Permalink to this headline">¶</a></h2>
+<p>Switched controller polling library to XInputs-Python (improves overall app performance).
+Added functionality for non-multiple of 10 frequencies. All integers now produce the correct wave.</p>
+</div>
+<div class="section" id="version-1-0-3">
+<h2>Version 1.0.3<a class="headerlink" href="#version-1-0-3" title="Permalink to this headline">¶</a></h2>
+<p>Fixed bug where on certain computers the gamepad thread was not being terminated, resulting in a laggy experience. If it does not close, it is now
+forcefully terminated.</p>
+</div>
+<div class="section" id="version-1-0-2">
+<h2>Version 1.0.2<a class="headerlink" href="#version-1-0-2" title="Permalink to this headline">¶</a></h2>
+<p>First distribution to collaborators. Minor documentation changes. App now pauses for 0.4 seconds before closing
+to insure threads are closed.</p>
+</div>
+<div class="section" id="version-1-0-0">
+<h2>Version 1.0.0<a class="headerlink" href="#version-1-0-0" title="Permalink to this headline">¶</a></h2>
+<p>Fully complete application. Quality control on multiple computers did not yield any bugs.. yet. User guide
+is included and located in the help menu.</p>
+</div>
 </div>
 
 
@@ -162,6 +201,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="extrainfo.html" class="btn btn-neutral float-left" title="Extra Information" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -119,6 +119,9 @@ Generation Rate
   of the waveforms. If this value is changed, I recommend changing it by increments of 1000. It is also required that the
   number is divisible by 10.
 
+.. warning:: The **Generation Rate** setting was removed in MuControl v1.1 as it is an advanced setting that shouldn't need 
+  to be changed.
+
 Default Signal Values
 ---------------------
 
